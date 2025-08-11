@@ -29,3 +29,16 @@ function listaAmigos(){
     }
 
 }
+
+function sortearAmigo(){
+  // debe haber ingresado  dos nombres como minimo
+  if (amigos.length <= 1){
+    alert("deben haber minimo dos nombres");
+
+  }else{
+    //realiza el sorteo y lo muestra en pantalla
+    let nombreSorteado = Math.floor(Math.random()* amigos.length);
+    lista.innerHTML = ""
+    document.getElementById("resultado").innerHTML= `el amigo secreto es ${amigos[nombreSorteado]}`;
+  }
+}
